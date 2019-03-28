@@ -49,7 +49,7 @@ Function.prototype.myBind = function (context) {
 // 确保返回值为对象
 function create() {
     let obj = {}
-    let Con = [].shoft.call(arguments)
+    let Con = [].shift.call(arguments)
     obj._proto_ = Con.prototype
     let result = Con.apply(obj, arguments)
     return result instanceof Object ? result : obj
